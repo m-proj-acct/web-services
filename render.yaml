@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: py-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py  # Adjust this to your application's entry point
+    #envVars:
+    #  - key: DATABASE_URL
+    #    value: "your_database_url_here"
+    #  - key: SECRET_KEY
+    #    value: "your_secret_key_here"
+    autoDeploy: true
+    healthCheckPath: /health  # Change this to your application's health check endpoint
+

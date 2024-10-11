@@ -12,7 +12,7 @@ def call_go_service():
         return jsonify({"error": "Vehicle number is required"}), 400
 
     # Call the Go service using Render's internal DNS
-    go_service_url = f"https://web-services-ucf2.onrender.com/assist?vehicle={vehicle_number}"
+    go_service_url = f"https://go-services-t8lc.onrender.com/assist?vehicle={vehicle_number}"
     try:
         response = requests.get(go_service_url)
         if response.status_code == 200:
